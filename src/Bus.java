@@ -23,7 +23,7 @@ class Bus {
 
     public void showSeats() {
         System.out.println("Total seats in bus #" + busNumber + ": " + capacity);
-        // For demonstration, assume half the seats are available
+        // طاهر عم ابراهيم
         System.out.println("Available seats: " + (capacity / 2));
         System.out.println("Occupied seats: " + (capacity - capacity / 2));
     }
