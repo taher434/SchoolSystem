@@ -19,10 +19,11 @@ abstract class Employee {
     }
 
     public void receiveSalary() {
-        System.out.println("Employee: " + employeeName + " has received a salary of: " + salary);
+        System.out.println("Employees: " + employeeName + " received a salary of: " + salary);
     }
 
     public void checkIn() {
-        System.out.println("Employee: " + employeeName + " has checked in.");
+        System.out.println("Employee: " + employeeName + "checked in");
     }
 }
+// Ibrahim Sarran

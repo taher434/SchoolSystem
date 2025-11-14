@@ -9,9 +9,9 @@ class NoticeBoard {
 
     public void display() {
         if (newsList.isEmpty()) {
-            System.out.println("Notice Board is empty.");
+            System.out.println("NoticeBoard is empty.");
         } else {
-            System.out.println("Notice Board Content:");
+            System.out.println("NoticeBoard Contents: ");
             for (String news : newsList) {
                 System.out.println("- " + news);
             }
@@ -20,6 +20,8 @@ class NoticeBoard {
 
     public void addContent(String content) {
         newsList.add(content);
-        System.out.println("Content added to Notice Board.");
+        System.out.println("Content added to NoticeBoard.");
     }
 }
+
+//Ibrahim Sarran -  451000513

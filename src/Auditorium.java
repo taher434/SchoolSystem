@@ -15,9 +15,9 @@ class Auditorium {
         if (participants <= (totalSeats - seatsOccupied)) {
             this.events.add("Event: " + eventName + ", Date: " + eventDate + ", Time: " + eventTime);
             seatsOccupied += participants;
-            System.out.println("Auditorium booked successfully!");
+            System.out.println("Auditorium booked succesfuly!");
         } else {
-            System.out.println("Not enough seats available!");
+            System.out.println("There are no enough seats available!");
         }
     }
 
@@ -34,6 +34,6 @@ class Auditorium {
 
     public void displaySeats() {
         System.out.println("Total Seats: " + totalSeats);
-        System.out.println("Seats Occupied: " + seatsOccupied);
+        System.out.println("Seats taken: " + seatsOccupied);
     }
 }
