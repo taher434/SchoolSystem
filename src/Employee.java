@@ -12,10 +12,10 @@ abstract class Employee {
     }
 
     public void employeeDetails() {
-        System.out.println("Employee ID: " + employeeId);
+        System.out.println("EmpID: " + employeeId);
         System.out.println("Name: " + employeeName);
         System.out.println("Salary: " + salary);
-        System.out.println("Department ID: " + departmentId);
+        System.out.println("DeptID: " + departmentId);
     }
 
     public void receiveSalary() {
@@ -26,4 +26,4 @@ abstract class Employee {
         System.out.println("Employee: " + employeeName + "checked in");
     }
 }
-// Ibrahim Sarran
+//Ibrahim Sarran -  451000513

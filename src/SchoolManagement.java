@@ -13,7 +13,7 @@ public class SchoolManagement {
     private Playground playground;
     private NoticeBoard noticeBoard;
     
-    // Collections for managing school entities
+    /// Ibrahim 
     private ArrayList<Employee> employees;
     private ArrayList<Student> students;
     private ArrayList<Bus> buses;

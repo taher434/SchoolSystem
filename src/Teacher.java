@@ -3,3 +3,5 @@ class Teacher extends Employee {
         super(employeeId, employeeName, salary, departmentId);
     }
 }
+
+//Ibrahim Sarran -  451000513

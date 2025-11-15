@@ -8,3 +8,5 @@ class HigherSecondaryStudent extends Student {
         System.out.println("Fees paid for Higher Secondary Student: " + studentName);
     }
 }
+
+// Ibrahim Sarran
