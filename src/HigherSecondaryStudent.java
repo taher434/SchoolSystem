@@ -5,8 +5,8 @@ class HigherSecondaryStudent extends Student {
 
     @Override
     public void payFees() {
-        System.out.println("Fees paid for Higher Secondary Student: " + studentName);
+        System.out.println("Fees paid for Higher Secondary Student: " + getStudentName());
     }
 }
 
-// Ibrahim Sarran
+// Ibrahim Sarran - 451000513
