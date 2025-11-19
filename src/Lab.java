@@ -1,40 +1,29 @@
-import java.util.ArrayList;
-
 class Lab {
+    private int labId;
+    private int inchargeId;
     private String labName;
-    private int labEquipmentCount;
-    private ArrayList<String> labEquipment;
-    private int benchCount;
-    private int fanCount;
-    private int lightCount;
+    private int equipmentId;
 
-    public Lab(String labName, int labEquipmentCount, ArrayList<String> labEquipment, int benchCount, int fanCount, int lightCount) {
+    public Lab(int labId, int inchargeId, String labName, int equipmentId) {
+        this.labId = labId;
+        this.inchargeId = inchargeId;
         this.labName = labName;
-        this.labEquipmentCount = labEquipmentCount;
-        this.labEquipment = labEquipment;
-        this.benchCount = benchCount;
-        this.fanCount = fanCount;
-        this.lightCount = lightCount;
+        this.equipmentId = equipmentId;
     }
 
     public void labDetails() {
+        System.out.println("Lab ID: " + labId);
         System.out.println("Lab Name: " + labName);
-        System.out.println("Lab Equipment Count : " + labEquipmentCount);
-        for (String equipment : labEquipment) {
-            System.out.println("Equipment: " + equipment);
-        }
-        System.out.println("Bench Count: " + benchCount);
-        System.out.println("Fan Count: " + fanCount);
-        System.out.println("Light Count: " + lightCount);
+        System.out.println("Incharge ID: " + inchargeId);
+        System.out.println("Equipment ID: " + equipmentId);
     }
 
     public boolean isOccupied() {
-        // For demonstration purposes, returning false
-        return false;
+        return false; 
     }
 
-    public void payFine(int studentId, double amount) {
-        System.out.println("Student with ID: " + studentId + " has paid a fine of: " + amount);
+    public void payFine() {
+        System.out.println("Fine details processed for Lab: " + labName);
     }
 }
 //Develop by Ibrahim Sarran 451000513

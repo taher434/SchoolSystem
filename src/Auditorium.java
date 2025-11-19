@@ -1,40 +1,40 @@
-import java.util.ArrayList;
-
 class Auditorium {
     private int totalSeats;
     private int seatsOccupied;
-    private ArrayList<String> events;
+    private String eventName;
+    private String eventDate;
+    private String eventTime;
 
     public Auditorium(int totalSeats) {
         this.totalSeats = totalSeats;
         this.seatsOccupied = 0;
-        this.events = new ArrayList<>();
+        this.eventName = "None";
+        this.eventDate = "N/A";
+        this.eventTime = "N/A";
     }
 
     public void bookAuditorium(String eventName, String eventDate, String eventTime, int participants) {
-        if (participants <= (totalSeats - seatsOccupied)) {
-            this.events.add("Event: " + eventName + ", Date: " + eventDate + ", Time: " + eventTime);
-            seatsOccupied += participants;
-            System.out.println("Auditorium booked succesfuly!");
+        if (participants <= totalSeats) {
+            this.eventName = eventName;
+            this.eventDate = eventDate;
+            this.eventTime = eventTime;
+            this.seatsOccupied = participants;
+            System.out.println("Auditorium booked for " + eventName);
         } else {
-            System.out.println("There are no enough seats available!");
+            System.out.println("Not enough seats!");
         }
     }
 
     public void eventDetails() {
-        if (events.isEmpty()) {
-            System.out.println("No events booked.");
-        } else {
-            System.out.println("Events Booked:");
-            for (String event : events) {
-                System.out.println(event);
-            }
-        }
+        System.out.println("Event: " + eventName);
+        System.out.println("Date: " + eventDate);
+        System.out.println("Time: " + eventTime);
     }
 
     public void displaySeats() {
         System.out.println("Total Seats: " + totalSeats);
-        System.out.println("Seats taken: " + seatsOccupied);
+        System.out.println("Occupied: " + seatsOccupied);
+        System.out.println("Available: " + (totalSeats - seatsOccupied));
     }
 }
 

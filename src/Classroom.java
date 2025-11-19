@@ -1,26 +1,23 @@
 class Classroom {
-    private int studentCount;
+    private int classId;       
     private String className;
-    private int classEquipmentId;
-    private int benchCount;
-    private int fanCount;
-    private int lightCount;
+    private int teacherId;     
+    private int studentCount;
+    private int equipmentId;
 
-    public Classroom(int studentCount, String className, int classEquipmentId, int benchCount, int fanCount, int lightCount) {
-        this.studentCount = studentCount;
+    public Classroom(int classId, String className, int teacherId, int studentCount, int equipmentId) {
+        this.classId = classId;
         this.className = className;
-        this.classEquipmentId = classEquipmentId;
-        this.benchCount = benchCount;
-        this.fanCount = fanCount;
-        this.lightCount = lightCount;
+        this.teacherId = teacherId;
+        this.studentCount = studentCount;
+        this.equipmentId = equipmentId;
     }
 
     public void classDetails() {
+        System.out.println("Class ID: " + classId);
         System.out.println("Class Name: " + className);
+        System.out.println("Teacher ID: " + teacherId);
         System.out.println("Student Count: " + studentCount);
-        System.out.println("Class Equipment ID: " + classEquipmentId);
-        System.out.println("Bench Count: " + benchCount);
-        System.out.println("Fan Count: " + fanCount);
-        System.out.println("Light Count: " + lightCount);
+        System.out.println("Equipment ID: " + equipmentId);
     }
 }

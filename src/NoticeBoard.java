@@ -1,26 +1,31 @@
-import java.util.ArrayList;
-
 class NoticeBoard {
-    private ArrayList<String> newsList;
+    private String[] newsList;
+    private int newsCount;
+    private String inchargeName;
 
     public NoticeBoard() {
-        newsList = new ArrayList<>();
+        this.newsList = new String[100]; 
+        this.newsCount = 0;
+        this.inchargeName = "Admin"; 
     }
 
     public void display() {
-        if (newsList.isEmpty()) {
-            System.out.println("NoticeBoard is empty.");
+        System.out.println("Notice Board (Incharge: " + inchargeName + ")");
+        if (newsCount == 0) {
+            System.out.println("No news available.");
         } else {
-            System.out.println("NoticeBoard Contents: ");
-            for (String news : newsList) {
-                System.out.println("- " + news);
+            for (int i = 0; i < newsCount; i++) {
+                System.out.println("- " + newsList[i]);
             }
         }
     }
 
     public void addContent(String content) {
-        newsList.add(content);
-        System.out.println("Content added to NoticeBoard.");
+        if (newsCount < newsList.length) {
+            newsList[newsCount] = content;
+            newsCount++;
+            System.out.println("Content added.");
+        }
     }
 }
 

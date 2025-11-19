@@ -1,10 +1,10 @@
 // Build by Ibrahim Sarran
 abstract class Student {
-    protected int studentId;
-    protected String studentName;
-    protected int classId;
-    protected String section;
-    protected int busId;
+    int studentId;
+    String studentName;
+    int classId;
+    String section;
+    int busId;
 
     public Student(int studentId, String studentName, int classId, String section, int busId) {
         this.studentId = studentId;
