@@ -1,10 +1,10 @@
 // Build by Ibrahim Sarran
 abstract class Student {
-    private int studentId;
-    private String studentName;
-    private int classId;
-    private String section;
-    private int busId;
+    protected int studentId;
+    protected String studentName;
+    protected int classId;
+    protected String section;
+    protected int busId;
 
     public Student(int studentId, String studentName, int classId, String section, int busId) {
         this.studentId = studentId;
@@ -14,9 +14,7 @@ abstract class Student {
         this.busId = busId;
     }
 
-    public String getStudentName() {
-    return studentName;
-}
+    
     public abstract void payFees();
 
     public void studentDetails() {

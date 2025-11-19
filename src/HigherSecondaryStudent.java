@@ -5,7 +5,7 @@ class HigherSecondaryStudent extends Student {
 
     @Override
     public void payFees() {
-        System.out.println("Fees paid for Higher Secondary Student: " + getStudentName());
+        System.out.println("Fees paid for Higher Secondary Student: " + studentName);
     }
 }
 

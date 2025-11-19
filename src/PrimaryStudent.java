@@ -5,7 +5,7 @@ class PrimaryStudent extends Student {
 
     @Override
     public void payFees() {
-        System.out.println("Fees paid for Primary Student: " + getStudentName());
+        System.out.println("Fees paid for Primary Student: " + studentName);
     }
 }
 
