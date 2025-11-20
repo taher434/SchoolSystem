@@ -71,12 +71,17 @@ public class SchoolManagement {
                     System.out.println("4- Go back");
                     int busChoice = scanner.nextInt();
                     if (busChoice == 1) {
-                        System.out.print("Bus ID: "); int bid = scanner.nextInt();
-                        System.out.print("Driver ID: "); int did = scanner.nextInt();
+                        System.out.print("Bus ID: "); 
+                        int bid = scanner.nextInt();
+                        System.out.print("Driver ID: "); 
+                        int did = scanner.nextInt();
                         scanner.nextLine();
-                        System.out.print("Area List: "); String area = scanner.nextLine();
-                        System.out.print("Bus Number: "); String bnum = scanner.nextLine();
-                        System.out.print("Capacity: "); int cap = scanner.nextInt();
+                        System.out.print("Area List: "); 
+                        String area = scanner.nextLine();
+                        System.out.print("Bus Number: "); 
+                        String bnum = scanner.nextLine();
+                        System.out.print("Capacity: "); 
+                        int cap = scanner.nextInt();
                         buses[busCount] = new Bus(bid, did, area, bnum, cap);
                         busCount++;
                     } else if (busChoice == 2) {
@@ -98,11 +103,16 @@ public class SchoolManagement {
                     int stuChoice = scanner.nextInt();
                     if (stuChoice == 1) {
                         scanner.nextLine();
-                        System.out.print("Name: "); String name = scanner.nextLine();
-                        System.out.print("Class ID: "); int cid = scanner.nextInt();
-                        System.out.print("Section: "); String sec = scanner.next();
-                        System.out.print("Bus ID: "); int bid = scanner.nextInt();
-                        System.out.print("Student ID: "); int sid = scanner.nextInt();
+                        System.out.print("Name: "); 
+                        String name = scanner.nextLine();
+                        System.out.print("Class ID: "); 
+                        int cid = scanner.nextInt();
+                        System.out.print("Section: "); 
+                        String sec = scanner.next();
+                        System.out.print("Bus ID: "); 
+                        int bid = scanner.nextInt();
+                        System.out.print("Student ID: "); 
+                        int sid = scanner.nextInt();
                         System.out.print("Type (P/H): ");
                         char type = scanner.next().toUpperCase().charAt(0);
                         if(type == 'P') {
@@ -135,12 +145,18 @@ public class SchoolManagement {
                         int tChoice = scanner.nextInt();
                         if (tChoice == 1) {
                              for(Employee emp : employees) {
-                                 if (emp instanceof Teacher) emp.employeeDetails();
+                                 if (emp instanceof Teacher) 
+                                    emp.employeeDetails();
                              }
                         } else if (tChoice == 2) {
                             for(Employee emp : employees) {
-                                 if (emp instanceof Teacher) emp.receiveSalary();
+                                 if (emp instanceof Teacher) 
+                                    emp.receiveSalary();
                              }
+                        }
+                        else if (tChoice == 3) {
+                            
+                            
                         }
                     } else if (empChoice == 2) {
                         System.out.println("1- Show Support Staff Details");
@@ -160,8 +176,8 @@ public class SchoolManagement {
                     break;
 
                 case "D":
-                    System.out.println("1- Add Students (by StudentID)");
-                    System.out.println("2- Assign Teacher (by TeacherID)");
+                    System.out.println("1- Add Students");
+                    System.out.println("2- Assign Teacher");
                     System.out.println("3- Show Details");
                     System.out.println("4- Go back");
                     int clsChoice = scanner.nextInt();
@@ -222,22 +238,29 @@ public class SchoolManagement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter School Name: "); String name = scanner.nextLine();
-        System.out.print("Enter Address: "); String address = scanner.nextLine();
-        System.out.print("Enter Contact Number: "); String contact = scanner.nextLine();
-        System.out.print("Enter Medium of Study: "); String medium = scanner.nextLine();
+        System.out.print("Enter School Name: "); 
+        String name = scanner.nextLine();
+        System.out.print("Enter Address: "); 
+        String address = scanner.nextLine();
+        System.out.print("Enter Contact Number: ");
+        String contact = scanner.nextLine();
+        System.out.print("Enter Medium of Study: "); 
+        String medium = scanner.nextLine();
 
         SchoolManagement school = new SchoolManagement(name, address, contact, medium);
 
-        System.out.print("Auditorium Seats: "); int seats = scanner.nextInt();
+        System.out.print("Auditorium Seats: "); 
+        int seats = scanner.nextInt();
         Auditorium auditorium = new Auditorium(seats);
 
-        System.out.print("Playground Area: "); int area = scanner.nextInt();
+        System.out.print("Playground Area: "); 
+        int area = scanner.nextInt();
         Playground playground = new Playground(area);
 
         System.out.print("How many Classrooms? ");
         int classNum = scanner.nextInt();
         Classroom[] classrooms = new Classroom[classNum];
+<<<<<<< HEAD
          for (int i = 0; i < classNum; i++) {
             System.out.println("Classroom " + (i+1));
             System.out.print("Student Count: "); int sc = scanner.nextInt();
@@ -247,6 +270,9 @@ public class SchoolManagement {
             System.out.print("Fan Count: "); int fc = scanner.nextInt();
            classrooms[i] = new Classroom(sc, cn, eid, bc, fc );
         }
+=======
+      
+>>>>>>> 592a22d0f6f21ff0899e9d2e00074fd551884244
         for (int i = 0; i < classNum; i++) {
             System.out.println("Classroom " + (i+1));
           
@@ -261,13 +287,13 @@ public class SchoolManagement {
             int tid = scanner.nextInt();
 
             System.out.print("Enter Student Count: "); 
-            int sc = scanner.nextInt();
+            int stdCount = scanner.nextInt();
             
             System.out.print("Enter Equipment ID: "); 
             int eid = scanner.nextInt();
 
             
-            classrooms[i] = new Classroom(cid, cn, tid, sc, eid);
+            classrooms[i] = new Classroom(cid, cn, tid, stdCount, eid);
         }
 
         System.out.print("How many Labs? ");
@@ -275,10 +301,14 @@ public class SchoolManagement {
         Lab[] labs = new Lab[labNum];
         for(int i=0; i < labNum; i++) {
             System.out.println("Lab " + (i+1));
-            System.out.print("Lab Name: "); scanner.nextLine(); String ln = scanner.nextLine();
-            System.out.print("Lab ID: "); int lid = scanner.nextInt(); 
-            System.out.print("Incharge ID: "); int inchid = scanner.nextInt();
-            System.out.print("Equipment ID: "); int eqid = scanner.nextInt();
+            System.out.print("Lab Name: "); scanner.nextLine(); 
+            String ln = scanner.nextLine();
+            System.out.print("Lab ID: ");
+            int lid = scanner.nextInt(); 
+            System.out.print("Incharge ID: ");
+            int inchid = scanner.nextInt();
+            System.out.print("Equipment ID: ");
+            int eqid = scanner.nextInt();
             
             labs[i] = new Lab(lid, inchid, ln, eqid);
         }
@@ -294,20 +324,28 @@ public class SchoolManagement {
         for(int i=0; i<teachNum; i++) {
             System.out.println("Teacher " + (i+1));
             scanner.nextLine();
-            System.out.print("Name: "); String ename = scanner.nextLine();
-            System.out.print("Salary: "); double sal = scanner.nextDouble();
-            System.out.print("Dept ID: "); int did = scanner.nextInt();
-            System.out.print("Employee ID: "); int eid = scanner.nextInt();
+            System.out.print("Name: ");
+            String ename = scanner.nextLine();
+            System.out.print("Salary: "); 
+            double sal = scanner.nextDouble();
+            System.out.print("Dept ID: "); 
+            int did = scanner.nextInt();
+            System.out.print("Employee ID: "); 
+            int eid = scanner.nextInt();
             employees[empIndex++] = new Teacher(eid, ename, sal, did);
         }
 
         for(int i=0; i<staffNum; i++) {
             System.out.println("Support Staff " + (i+1));
             scanner.nextLine();
-            System.out.print("Name: "); String ename = scanner.nextLine();
-            System.out.print("Salary: "); double sal = scanner.nextDouble();
-            System.out.print("Dept ID: "); int did = scanner.nextInt();
-            System.out.print("Employee ID: "); int eid = scanner.nextInt();
+            System.out.print("Name: "); 
+            String ename = scanner.nextLine();
+            System.out.print("Salary: "); 
+            double sal = scanner.nextDouble();
+            System.out.print("Dept ID: "); 
+            int did = scanner.nextInt();
+            System.out.print("Employee ID: "); 
+            int eid = scanner.nextInt();
             employees[empIndex++] = new SupportStaff(eid, ename, sal, did);
         }
 
