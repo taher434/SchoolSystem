@@ -160,8 +160,8 @@ public class SchoolManagement {
                     break;
 
                 case "D":
-                    System.out.println("1- Add Students (by StudentID)");
-                    System.out.println("2- Assign Teacher (by TeacherID)");
+                    System.out.println("1- Add Students");
+                    System.out.println("2- Assign Teacher");
                     System.out.println("3- Show Details");
                     System.out.println("4- Go back");
                     int clsChoice = scanner.nextInt();
@@ -238,16 +238,7 @@ public class SchoolManagement {
         System.out.print("How many Classrooms? ");
         int classNum = scanner.nextInt();
         Classroom[] classrooms = new Classroom[classNum];
-       /*  for (int i = 0; i < classNum; i++) {
-            System.out.println("Classroom " + (i+1));
-            System.out.print("Student Count: "); int sc = scanner.nextInt();
-            System.out.print("Class Name: "); scanner.nextLine(); String cn = scanner.nextLine();
-            System.out.print("Equipment ID: "); int eid = scanner.nextInt();
-            System.out.print("Bench Count: "); int bc = scanner.nextInt();
-            System.out.print("Fan Count: "); int fc = scanner.nextInt();
-            System.out.print("Light Count: "); int lc = scanner.nextInt();
-            classrooms[i] = new Classroom(sc, cn, eid, bc, fc, lc);
-        }*/
+      
         for (int i = 0; i < classNum; i++) {
             System.out.println("Classroom " + (i+1));
           

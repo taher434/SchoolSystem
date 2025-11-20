@@ -1,7 +1,7 @@
 class Playground {
     private int area;
     private int classId; 
-    private boolean isOccupied;
+    
 
     public Playground(int area) {
         this.area = area;
