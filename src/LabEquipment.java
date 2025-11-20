@@ -15,3 +15,4 @@ class LabEquipment extends Equipment {
         System.out.println("Equipment Count: " + equipmentCount);
     }
 }
+//Taher Ramzi - 451000573

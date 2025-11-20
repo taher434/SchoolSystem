@@ -21,3 +21,4 @@ class ClassEquipment extends Equipment {
         System.out.println("Light Count: " + lightCount);
     }
 }
+//Taher Ramzi - 451000573

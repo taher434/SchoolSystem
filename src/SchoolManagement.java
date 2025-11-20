@@ -238,16 +238,15 @@ public class SchoolManagement {
         System.out.print("How many Classrooms? ");
         int classNum = scanner.nextInt();
         Classroom[] classrooms = new Classroom[classNum];
-       /*  for (int i = 0; i < classNum; i++) {
+         for (int i = 0; i < classNum; i++) {
             System.out.println("Classroom " + (i+1));
             System.out.print("Student Count: "); int sc = scanner.nextInt();
             System.out.print("Class Name: "); scanner.nextLine(); String cn = scanner.nextLine();
             System.out.print("Equipment ID: "); int eid = scanner.nextInt();
             System.out.print("Bench Count: "); int bc = scanner.nextInt();
             System.out.print("Fan Count: "); int fc = scanner.nextInt();
-            System.out.print("Light Count: "); int lc = scanner.nextInt();
-            classrooms[i] = new Classroom(sc, cn, eid, bc, fc, lc);
-        }*/
+           classrooms[i] = new Classroom(sc, cn, eid, bc, fc );
+        }
         for (int i = 0; i < classNum; i++) {
             System.out.println("Classroom " + (i+1));
           
