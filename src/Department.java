@@ -27,9 +27,5 @@ class Department {
     
     }
 }
-<<<<<<< HEAD
-//Taher Ramzi - 451000573
-=======
 
 //Ibrahim Sarran  - 451000513
->>>>>>> 592a22d0f6f21ff0899e9d2e00074fd551884244
