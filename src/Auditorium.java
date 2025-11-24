@@ -8,7 +8,7 @@ class Auditorium {
     public Auditorium(int totalSeats) {
         this.totalSeats = totalSeats;
         this.seatsOccupied = 0;
-        this.eventName = "Null";
+        this.eventName = "None";
         this.eventDate = "N/A";
         this.eventTime = "N/A";
     }
@@ -21,7 +21,7 @@ class Auditorium {
             this.seatsOccupied = participants;
             System.out.println("Auditorium booked for " + eventName);
         } else {
-            System.out.println("No enough seats!");
+            System.out.println("Not enough seats!");
         }
     }
 

@@ -20,4 +20,4 @@ abstract class Equipment {
         System.out.println("Equipment with ID: " + equipmentId + " has been repaired.");
     }
 }
-//Taher Ramzi - 451000573
+//Taher Ramzi -451000573
